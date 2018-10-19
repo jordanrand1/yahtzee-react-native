@@ -1,9 +1,8 @@
 import axios from 'axios'
+import { BASE_URL } from '../utils/urls'
 
 const LOGIN = 'LOGIN'
 const LOGOUT = 'LOGOUT'
-
-const BASE_URL = ''
 
 export const login = (user) => {
   return { type: LOGIN, user }

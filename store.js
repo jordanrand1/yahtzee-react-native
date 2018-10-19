@@ -3,8 +3,7 @@ import rootReducer from './reducers/index'
 import thunk from 'redux-thunk'
 
 const enhancers = compose(
-  applyMiddleware(thunk),
-  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__() 
+  applyMiddleware(thunk)
 )
 
 const store = createStore(rootReducer, {}, enhancers)
@@ -16,12 +15,4 @@ if (module.hot) {
   })
 }
 
-
-
-
-
-
-
-
 export default store
-
